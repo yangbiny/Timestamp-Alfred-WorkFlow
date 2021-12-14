@@ -2,12 +2,12 @@ package main
 
 import (
 	aw "github.com/deanishe/awgo"
-	"os"
 )
 
 func main() {
-	args := os.Args
-	println(args)
+	println("xxx")
 	workflow := aw.New()
-	println(workflow.Args())
+	item := workflow.NewItem("时间")
+	item.Arg("123456")
+	workflow.SendFeedback()
 }
